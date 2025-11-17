@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+body , html {
+    font-family: Arial, Helvetica, sans-serif;    
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+/* clases personalizadas */
+/* #E63946 #1D1D1D #FFFFFF #F8E9D2 */
+/* FREDOKA Quicksand  */
+.color-1 {
+  background-color: #E63946;
+}
+.color-2 {
+  background-color: #1D1D1D;  
+}
+.color-3 {
+  background-color: #FFFFFF;
+}
+.color-4 {
+  background-color: #F8E9D2
+}
+/* textos */
+.text-color-1 {
+  color: #E63946;
+}
+.text-color-2 {
+  color: #1D1D1D;
+}
+.text-color-3 {
+  color: #FFFFFF;
+}
+.text-color-4 {
+  color: #F8E9D2;
+}
+/* letras */
+.fredoka-1 {
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.quicksand-1 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+.starburst {
+  width: var(--size, theme(width.24));
+  height: var(--size, theme(height.24));
+  aspect-ratio: 1;
+  clip-path: polygon(100% 50%,94.54% 56.4%,97.97% 64.09%,90.93% 68.69%,92.06% 77.03%,84.01% 79.47%,82.74% 87.79%,74.33% 87.86%,70.77% 95.48%,62.68% 93.18%,57.12% 99.49%,50% 95%,42.88% 99.49%,37.32% 93.18%,29.23% 95.48%,25.67% 87.86%,17.26% 87.79%,15.99% 79.47%,7.94% 77.03%,9.07% 68.69%,2.03% 64.09%,5.46% 56.4%,0% 50%,5.46% 43.6%,2.03% 35.91%,9.07% 31.31%,7.94% 22.97%,15.99% 20.53%,17.26% 12.21%,25.67% 12.14%,29.23% 4.52%,37.32% 6.82%,42.88% 0.51%,50% 5%,57.12% 0.51%,62.68% 6.82%,70.77% 4.52%,74.33% 12.14%,82.74% 12.21%,84.01% 20.53%,92.06% 22.97%,90.93% 31.31%,97.97% 35.91%,94.54% 43.6%);
+}
+
+
+/* shadow perosnalizados  */
+.shadow-1 {
+-webkit-box-shadow: 11px 7px 8px 0px rgba(0,0,0,0.63); 
+box-shadow: 11px 7px 8px 0px rgba(0,0,0,0.63);
+}
+
+.shadow-2 {
+-webkit-box-shadow: 11px 7px 16px -4px rgba(255,255,255,0.45); 
+box-shadow: 11px 7px 16px -4px rgba(255,255,255,0.45);
+}
+
+/* bg animado  */
+.css-selector {
+    background: linear-gradient(138deg, #ce1f1f, #f7473e, #d03027);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    -o-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 14%}
+    50%{background-position:100% 87%}
+    100%{background-position:0% 14%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 14%}
+    50%{background-position:100% 87%}
+    100%{background-position:0% 14%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 14%}
+    50%{background-position:100% 87%}
+    100%{background-position:0% 14%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 14%}
+    50%{background-position:100% 87%}
+    100%{background-position:0% 14%}
+}
+
+
+.css-selector-2 {
+    background: linear-gradient(239deg, #ffffff, #e3dbdb, #ffffff);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 11s ease infinite;
+    -moz-animation: AnimationName 11s ease infinite;
+    animation: AnimationName 11s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 94%}
+    50%{background-position:100% 7%}
+    100%{background-position:0% 94%}
+}
+
+.css-selector-3 {
+    background: linear-gradient(155deg, #000000, #2d2a2a, #5c5c5c);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 5s ease infinite;
+    -moz-animation: AnimationName 5s ease infinite;
+    animation: AnimationName 5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 13%}
+    50%{background-position:100% 88%}
+    100%{background-position:0% 13%}
+}
+
+
+
+/* Oculta los elementos que serán animados, asegurando que no se vean
+   en el estado inicial antes de que la animación los haga aparecer. */
+.invi {
+    visibility: hidden;
+}
+
+/* Una vez que el JavaScript añade la clase 'animate__animated', Animate.css 
+   hace que el elemento sea visible y comienza el efecto. */
+.visi {
+    visibility: visible;
+}
