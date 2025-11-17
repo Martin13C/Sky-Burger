@@ -169,12 +169,26 @@ box-shadow: 11px 7px 16px -4px rgba(255,255,255,0.45);
 
 /* Oculta los elementos que serán animados, asegurando que no se vean
    en el estado inicial antes de que la animación los haga aparecer. */
-.invi {
+/* .invi {
     visibility: hidden;
-}
+} */
 
 /* Una vez que el JavaScript añade la clase 'animate__animated', Animate.css 
    hace que el elemento sea visible y comienza el efecto. */
-.visi {
+/* .visi {
     visibility: visible;
+} */
+
+
+/* Estado inicial: completamente invisible */
+.pre-anim {
+    opacity: 0;
+    transform: translateY(20px); /* un pequeño desplazamiento opcional */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* Estado cuando ya debe aparecer */
+.anim-visible {
+    opacity: 1;
+    transform: translateY(0);
 }

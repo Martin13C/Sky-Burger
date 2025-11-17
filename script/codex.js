@@ -54,6 +54,7 @@ window.addEventListener("scroll", () => {
 // codigo para msj por whatsapp 
     const form = document.getElementById('whatsapp-simple');
     
+    if (form) {
     // CAMBIÁ ESTE NÚMERO por el del local (solo números, con 54 y sin 15)
     const numeroLocal = "543856123456";  // ← ACÁ VA TU NÚMERO REAL
 
@@ -68,38 +69,55 @@ window.addEventListener("scroll", () => {
         const url = `https://wa.me/${numeroLocal}?text=${texto}`;
         window.open(url, '_blank');
     });
+  }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Selecciona todos los elementos que quieres animar.
-    // Usamos la clase 'animar-al-scroll' como marcador.
-    const elementsToObserve = document.querySelectorAll('.animar-al-scroll');
 
-    // Opciones del observador:
-    // threshold: 0.1 significa que la animación se disparará cuando el 10% del elemento sea visible.
-    // Puedes ajustarlo entre 0 (cualquier píxel) y 1 (elemento completamente visible).
-    const observerOptions = {
-        threshold: 0.15 
-    };
+    // =======================================
+// ANIMACIONES AUTOMÁTICAS (on scroll)
+// =======================================
 
-    const observer = new IntersectionObserver((entries, observer) => {
+// const animatedElements = document.querySelectorAll("[data-animate]");
+
+// const observer = new IntersectionObserver(
+//     (entries) => {
+//         entries.forEach((entry) => {
+//             if (entry.isIntersecting) {
+//                 const animation = entry.target.dataset.animate;
+//                 entry.target.classList.add(...animation.split(" "));
+//                 observer.unobserve(entry.target);
+//             }
+//         });
+//     },
+//     { threshold: 0.2 }
+// );
+
+// animatedElements.forEach((el) => observer.observe(el));
+
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll("[data-animate]");
+
+    elements.forEach(el => {
+        el.classList.add("pre-anim"); // invisible antes del scroll
+    });
+
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // El elemento es visible: Disparamos la animación.
-                const element = entry.target;
+                const anim = entry.target.getAttribute("data-animate");
 
-                // 1. Añadimos la clase base de Animate.css
-                element.classList.add('animate__animated'); 
+                entry.target.classList.add("anim-visible"); // aparece suave
 
-                // 2. Opcional: para que la animación no se repita
-                // al volver a hacer scroll sobre ella.
-                observer.unobserve(element);
+                if (anim && anim.trim() !== "") {
+                    entry.target.classList.add("animate__animated", anim);
+                }
+
+                observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
-
-    // Iteramos sobre todos los elementos seleccionados y empezamos a observarlos.
-    elementsToObserve.forEach(el => {
-        observer.observe(el);
+    }, {
+        threshold: 0.2
     });
+
+    elements.forEach(el => observer.observe(el));
 });
