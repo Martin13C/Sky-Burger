@@ -5,22 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sky-Burger</title>
+
+    <!-- coneccion con archivo.css  -->
     <link rel="stylesheet" href="style/index.css">
+
+    <!-- logo de sky burger en la ventana  -->
     <link rel="icon" type="image/png" href="public/LOGO PRINCIPAL.png">
+
+    <!-- importacion de fuentes de google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
+
+    <!-- impotacion o instalaciond e taildwind  -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Animate.css 2025 – versión más rápida y con más efectos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- Fancybox CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
 </head>
 
-<body class="">
+<body>
     <header class="flex color-1 flex-col h-screen md:p-10 lg:px-36">
         <nav id="navbar"
             class="fredoka-1  font-semibold basis-1/8 shadow-md fixed z-50 w-full top-0 left-0 px-1 md:px-6 lg:px-28">
@@ -50,6 +61,7 @@
                         class="hidden md:flex space-x-8 font-medium justify-center items-center text-color-2">
                         <a href="page/nosotros.html" class="hover:text-gray-100 transition-colors">Nosotros</a>
                         <a href="page/menu.html" class="hover:text-gray-100 transition-colors">Menú</a>
+                        <a href="page/galeria.html" class="hover:text-gray-100 transition-colors">Galeria</a>
                         <a href="page/contact.html" class="hover:text-gray-100 transition-colors">Contacto</a>
                         <a id="boton-pedido" href="page/pedidos.html"
                             class="color-2 text-white px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition-all shadow-md hover:shadow-lg">
@@ -63,6 +75,7 @@
                 <div class="flex flex-col space-y-2 px-6 py-4">
                     <a href="page/nosotros.html" class="text-gray-700 hover:text-color-2">Nosotros</a>
                     <a href="page/menu.html" class="text-gray-700 hover:text-color-2">Menú</a>
+                    <a href="page/galeria.html" class="text-gray-700 hover:text-color-2">Galeria</a>
                     <a href="page/contact.html" class="text-gray-700 hover:text-color-2">Contacto</a>
                     <a href="page/pedidos.html"
                         class="color-2 text-white px-4 py-2 rounded-full text-center hover:bg-red-700 transition-all shadow-md hover:shadow-lg">
@@ -75,13 +88,13 @@
         <section
             class="h-full relative flex flex-col md:flex-row items-center justify-between mt-20 md:mt-16 max-w-7xl mx-auto overflow-hidden md:bg-gray-950 md:rounded-lg md:shadow-black md:shadow-lg md:p-5">
 
-            <div class="m-3 flex flex-col items-start space-y-4 md:w-1/2 md:gap-4">
-                <h5
-                    class="text-lg md:text-2xl quicksand-1 font-bold text-color-2 uppercase tracking-wide md:text-red-500 " data-animate="animate__fadeInDownBig" >
+            <div class="z-20 m-3 flex flex-col items-start space-y-4 md:w-1/2 md:gap-4">
+                <h5 class="text-lg md:text-2xl quicksand-1 font-bold text-color-2 uppercase tracking-wide md:text-red-500 "
+                    data-animate="animate__fadeInDownBig">
                     Hamburguesas cada día
                 </h5>
-                <h2
-                    class="text-4xl md:text-6xl fredoka-1 uppercase font-semibold text-color-3 drop-shadow-lg " data-animate="animate__fadeInDownBig" >
+                <h2 class="text-4xl md:text-6xl fredoka-1 uppercase font-semibold text-color-3 drop-shadow-lg "
+                    data-animate="animate__fadeInDownBig">
                     Amor por las hamburguesas
                 </h2>
 
@@ -100,16 +113,18 @@
             </div>
 
             <div class="relative flex justify-center md:h-full">
-                <div class="absolute top-3 left-3 color-2 starburst flex flex-col items-center justify-center text-center md:bg-red-500 animate__infinite" data-animate="animate__pulse"
-                    style="--size: 120px;">
-                    <h5 class="text-sm font-extrabold text-color-1 drop-shadow md:text-black">Desde</h5>
+
+                <div class="absolute z-20 top-3 left-3 bg-black md:bg-red-500 starburst flex flex-col items-center justify-center text-center animate__infinite "
+                    data-animate="animate__pulse" style="--size: 150px;">
+                    <h5 class="text-sm font-extrabold text-color-1 drop-shadow-md md:text-black">Desde</h5>
                     <h3 class="text-2xl font-extrabold text-white drop-shadow-md">$5.000</h3>
                 </div>
-
-
                 <img src="public/pruebas/Especial-1.0.png" alt="Imagen promocional"
-                    class="object-cover md:object-contain md:object-bottom md:rounded-lg">
+                    class="object-cover md:object-contain md:object-bottom md:rounded-lg animate__fadeInUp animate__slower"
+                    style="filter: drop-shadow(-30px -30px 50px rgb(231, 14, 14))" data-animate="animate__animated">
             </div>
+
+
         </section>
 
     </header>
@@ -117,8 +132,9 @@
     <section class="h-screen color-3 flex flex-col p-5 md:flex-row md:justify-center md:items-center md:px-12 lg:px-36">
 
         <div class="flex flex-col fredoka-1 gap-4 md:w-1/2 md:gap-6 md:pr-8">
-            <h3 class="font-bold text-2xl uppercase text-color-2 md:text-3xl lg:text-4xl" data-animate="animate__backInDown">
-                Las mejores Burgers de Tinogasta
+            <h3 class="font-bold text-2xl uppercase text-color-2 md:text-3xl lg:text-4xl"
+                data-animate="animate__backInDown">
+                Burgers unicas en Tinogasta
             </h3>
             <h5 class="quicksand-1 font-medium text-xl text-color-2 md:text-2xl">
                 Equilibrio y Balance en nuestros productos
@@ -128,7 +144,8 @@
             </p>
 
             <a href="page/nosotros.html"
-                class="flex items-center gap-2 self-start rounded-full color-1 px-6 py-3 md:px-7 text-sm md:text-base font-semibold uppercase tracking-wide transition-all duration-300 shadow-sm hover:scale-105 hover:bg-black hover:text-red-500 text-color-3 animate__faster" data-animate="animate__backInLeft">
+                class="flex items-center gap-2 self-start rounded-full color-1 px-6 py-3 md:px-7 text-sm md:text-base font-semibold uppercase tracking-wide transition-all duration-300 shadow-sm hover:scale-105 hover:bg-black hover:text-red-500 text-color-3 animate__faster"
+                data-animate="animate__backInLeft">
                 Nosotros
             </a>
         </div>
@@ -137,7 +154,8 @@
 
             <div class="flex flex-col items-center">
                 <a href="page/menu.html"
-                    class="flex justify-center items-center color-1 rounded-full p-4 m-2 hover:scale-110 transition-transform" data-animate="animate__backInRight">
+                    class="flex justify-center items-center color-1 rounded-full p-4 m-2 hover:scale-110 transition-transform"
+                    data-animate="animate__backInRight">
                     <img src="public/icons/hamburguesa (1).png" alt="Carne de calidad"
                         class="w-12 h-12 md:w-14 md:h-14">
                 </a>
@@ -148,7 +166,8 @@
 
             <div class="flex flex-col items-center">
                 <a href="page/menu.html"
-                    class="flex justify-center items-center color-1 rounded-full p-4 m-2 hover:scale-110 transition-transform animate__faster" data-animate="animate__backInRight">
+                    class="flex justify-center items-center color-1 rounded-full p-4 m-2 hover:scale-110 transition-transform animate__faster"
+                    data-animate="animate__backInRight">
                     <img src="public/icons/entrega-de-comida.png" alt="Delivery" class="w-12 h-12 md:w-14 md:h-14">
                 </a>
                 <h4 class="fredoka-1 font-semibold uppercase text-color-2 text-xs md:text-sm mt-1">
@@ -158,7 +177,8 @@
 
             <div class="flex flex-col items-center">
                 <a href="page/menu.html"
-                    class="flex justify-center items-center color-1 rounded-full p-4 m-2 hover:scale-110 transition-transform" data-animate="animate__backInRight">
+                    class="flex justify-center items-center color-1 rounded-full p-4 m-2 hover:scale-110 transition-transform"
+                    data-animate="animate__backInRight">
                     <img src="public/icons/cocinando.png" alt="Sazón único" class="w-12 h-12 md:w-14 md:h-14">
                 </a>
                 <h4 class="fredoka-1 font-semibold uppercase text-color-2 text-xs md:text-sm mt-1">
@@ -168,7 +188,8 @@
 
             <div class="flex flex-col items-center">
                 <a href="page/menu.html"
-                    class="flex justify-center items-center color-1 rounded-full p-4 m-2 hover:scale-110 transition-transform animate__faster" data-animate="animate__backInRight">
+                    class="flex justify-center items-center color-1 rounded-full p-4 m-2 hover:scale-110 transition-transform animate__faster"
+                    data-animate="animate__backInRight">
                     <img src="public/icons/tabla-de-cortar.png" alt="Ingredientes frescos"
                         class="w-12 h-12 md:w-14 md:h-14">
                 </a>
@@ -182,8 +203,8 @@
 
 
     <section class="h-screen quicksand-1 color-2 p-4 md:px-10 lg:px-36 lg:py-14">
-        <div
-            class="w-full h-full bg-cover bg-center rounded-xl md:hover:scale-105 hover:shadow-md hover:shadow-gray-200/50 transition-all duration-300 flex flex-col items-center justify-end text-center p-6 gap-4 md:shadow-md md:shadow-black lg:items-start lg:text-left text-white  bg-[url('./public/pruebas/listas/5.png')] md:bg-[url('./public/pruebas/listas/10.png')]" data-animate="animate__flipInX">
+        <div class="w-full h-full bg-cover bg-center rounded-xl md:hover:scale-105 hover:shadow-md hover:shadow-gray-200/50 transition-all duration-300 flex flex-col items-center justify-end text-center p-6 gap-4 md:shadow-md md:shadow-black lg:items-start lg:text-left text-white  bg-[url('./public/pruebas/listas/5.png')] md:bg-[url('./public/pruebas/listas/10.png')]"
+            data-animate="animate__flipInX">
 
             <h2 class="fredoka-1 font-extrabold text-4xl md:text-5xl">Nuestra hamburguesería</h2>
             <h6 class="text-2xl md:text-3xl">Es una nueva experiencia de sabor</h6>
@@ -214,7 +235,8 @@
                 lg:grid-cols-4 lg:grid-rows-2 
                 gap-2 sm:gap-3 md:gap-4 lg:gap-5">
 
-                <a href="" class="col-span-1 row-span-2 
+                <!-- imagen 1 -->
+                <a href="/public/pruebas/listas/12.png" data-fancybox="gallery" data-animate="animate__fadeInLeftBig" class="col-span-1 row-span-2 
                 sm:col-span-1 sm:row-span-2
                 md:col-span-4 md:row-span-3 
                 lg:col-span-1 lg:row-span-2 
@@ -224,64 +246,69 @@
                         class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                 </a>
 
-                <a href="" class="col-span-1 
+                <!-- imagen 2 -->
+                <a href="/public/pruebas/listas/6.png" data-fancybox="gallery" data-animate="animate__fadeInUp" class="col-span-1 
                 sm:col-span-2 sm:row-span-1
                 md:col-span-4 md:row-span-1 
                 lg:col-span-1 lg:row-span-1 
                 rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl">
-                    <img src="public/pruebas/listas/6.png" alt=""
+                    <img src="/public/pruebas/listas/6.png" alt=""
                         class="w-full h-full object-cover hover:scale-105 transition">
                 </a>
 
-                <a href="" class="col-span-1 
+                <!-- imagen 3 -->
+                <a href="/public/pruebas/listas/9.png" data-fancybox="gallery" data-animate="animate__fadeInTopRight" class="col-span-1 
                 sm:col-span-1 sm:row-span-1
                 md:col-span-2 md:row-span-1 
                 lg:col-span-1 lg:row-span-1 
                 rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl">
-                    <img src="public/pruebas/listas/9.png" alt=""
+                    <img src="/public/pruebas/listas/9.png" alt=""
                         class="w-full h-full object-cover hover:scale-105 transition">
                 </a>
 
-                <a href="" class="col-span-1 
+                <!-- imagen 4 -->
+                <a href="/public/pruebas/listas/11.png" data-fancybox="gallery" data-animate="animate__fadeInRightBig" class="col-span-1 
                 sm:col-span-1 sm:row-span-1
                 md:col-span-3 md:row-span-2 
                 lg:col-span-1 lg:row-span-1 
                 rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl">
-                    <img src="public/pruebas/listas/11.png" alt=""
+                    <img src="/public/pruebas/listas/11.png" alt=""
                         class="w-full h-full object-cover hover:scale-105 transition">
                 </a>
 
-                <a href="" class="col-span-1 
+                <!-- imagen 5 -->
+                <a href="/public/pruebas/listas/5.png" data-fancybox="gallery" data-animate="animate__fadeInUp" class="col-span-1 
                 sm:col-span-1 sm:row-span-1
                 md:col-span-3 md:row-span-2 
                 lg:col-span-1 lg:row-span-1 
                 rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl">
-                    <img src="public/pruebas/listas/5.png" alt=""
+                    <img src="/public/pruebas/listas/5.png" alt=""
                         class="w-full h-full object-cover hover:scale-105 transition">
                 </a>
 
-                <a href="" class="col-span-1 
+                <!-- imagen 6 -->
+                <a href="/public/pruebas/listas/7.png" data-fancybox="gallery" data-animate="animate__fadeInBottomRight" class="col-span-1 
                 sm:col-span-1 sm:row-span-1
                 md:col-span-4 md:row-span-1 
                 lg:col-span-1 lg:row-span-1 
                 rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl">
-                    <img src="public/pruebas/listas/7.png" alt=""
+                    <img src="/public/pruebas/listas/7.png" alt=""
                         class="w-full h-full object-cover hover:scale-105 transition">
                 </a>
 
-                <a href="" class="col-span-1 
+                <!-- imagen 7 -->
+                <a href="/public/pruebas/listas/10.png" data-fancybox="gallery" data-animate="animate__fadeInRightBig" class="col-span-1 
                 sm:col-span-1 sm:row-span-1
                 md:col-span-6 md:row-span-1 
                 lg:col-span-1 lg:row-span-1 
                 rounded-xl sm:rounded-2xl lg:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl">
-                    <img src="public/pruebas/listas/10.png" alt=""
+                    <img src="/public/pruebas/listas/10.png" alt=""
                         class="w-full h-full object-cover hover:scale-105 transition">
                 </a>
 
             </div>
         </div>
     </section>
-
 
 
     <footer
@@ -368,8 +395,9 @@
 
 
     <script src="script/codex.js"></script>
+
     <!-- Fancybox JS -->
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
 </body>
 

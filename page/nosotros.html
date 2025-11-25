@@ -14,6 +14,11 @@
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animate.css 2025 – versión más rápida y con más efectos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 </head>
 
 <body class="color-3 quicksand-1">
@@ -46,6 +51,7 @@
                         class="hidden md:flex space-x-8 font-medium justify-center items-center text-color-3">
                         <a href="nosotros.html" class="hover:text-gray-100 transition-colors">Nosotros</a>
                         <a href="menu.html" class="hover:text-gray-100 transition-colors">Menú</a>
+                        <a href="galeria.html" class="hover:text-gray-100 transition-colors">Galeria</a>
                         <a href="contact.html" class="hover:text-gray-100 transition-colors **font-bold**">Contacto</a>
                         <a id="boton-pedido" href="pedidos.html"
                             class="color-2 text-white px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition-all shadow-md hover:shadow-lg">
@@ -59,6 +65,7 @@
                 <div class="flex flex-col space-y-2 px-6 py-4">
                     <a href="nosotros.html" class="text-gray-700 hover:text-color-2">Nosotros</a>
                     <a href="menu.html" class="text-gray-700 hover:text-color-2">Menú</a>
+                    <a href="galeria.html" class="text-gray-700 hover:text-color-2">Galeria</a>
                     <a href="contact.html" class="text-gray-700 hover:text-color-2 **font-bold**">Contacto</a>
                     <a href="pedidos.html"
                         class="color-2 text-white px-4 py-2 rounded-full text-center hover:bg-red-700 transition-all shadow-md hover:shadow-lg">
@@ -69,13 +76,14 @@
         </nav>
     </header>
 
-    <!-- parrafo informativo -->
+    <!-- Inicio con imagenes y video-->
     <section
         class="flex flex-col pt-20 pb-4 justify-center items-center color-4 min-h-screen px-4 md:px-10 lg:px-36 bg-[url('/public/fondos/C/PATRONC2.png')] bg-cover bg-fixed">
         <!-- TÍTULO CENTRADO -->
         <div class="text-center mb-8 lg:mb-12">
             <h6 class="font-bold text-2xl text-color-1">¿Quiénes somos?</h6>
-            <h3 class="fredoka-1 text-color-2 font-extrabold text-4xl md:text-5xlmt-2">
+            <h3 data-animate="animate__fadeInDownBig"
+                class="fredoka-1 text-color-2 font-extrabold text-4xl md:text-5xlmt-2">
                 SKY - BURGERS
             </h3>
         </div>
@@ -84,8 +92,8 @@
         <div class="flex flex-col w-full md:flex-row gap-6 lg:gap-auto justify-center">
 
             <!-- IMAGEN IZQUIERDA -->
-            <div class="w-full hover:scale-105 transition-all duration-300">
-                <div class="bg-[url('/public/pruebas/listas/4.png')] 
+            <div class="w-full hover:scale-105 transition-all duration-300" data-fancybox="gallery1" href="/public/pruebas/listas/4.png">
+                <div data-animate="animate__backInLeft" class="bg-[url('/public/pruebas/listas/4.png')] 
                   bg-cover bg-center 
                   rounded-2xl 
                   h-64 md:h-80 lg:h-full 
@@ -94,9 +102,10 @@
             </div>
 
             <!-- TEXTO + BOTÓN (CENTRO) -->
-            <div class="flex flex-col justify-center gap-4 text-color-2 text-center items-center">
+            <div data-animate="animate__flipInX"
+                class="flex flex-col justify-center gap-4 text-color-2 text-center items-center">
                 <h2 class="text-xl md:text-2xl font-bold leading-tight">
-                    Las mejores Hamburguesas de Tinogasta y con un toque único
+                    Burgers americanas, únicas en Tinogasta
                 </h2>
                 <p class="text-sm md:text-base font-medium leading-relaxed opacity-90">
                     SKY burgers nace de la combinación de nuestro gusto por la mejor comida del mundo: la
@@ -121,8 +130,8 @@
             </div>
 
             <!-- IMAGEN DERECHA -->
-            <div class="w-full hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <div class="bg-[url('/public/pruebas/listas/11.png')] 
+            <div class="w-full hover:scale-105 transition-all duration-300 hover:shadow-2xl" data-fancybox="gallery1" href="/public/pruebas/listas/11.png">
+                <div data-animate="animate__backInRight" class="bg-[url('/public/pruebas/listas/11.png')] 
                   bg-cover bg-center 
                   rounded-2xl 
                   h-64 md:h-80 lg:h-full  
@@ -133,14 +142,16 @@
 
     </section>
 
-    <!-- ingredienyes frescos  -->
+    <!-- ingredientes frescos  -->
     <section class="quicksand-1 h-screen color-3 flex flex-col justify-center p-4 md:p-10 lg:px-36 gap-14">
         <!-- TÍTULO (altura fija) -->
         <div class="flex flex-col gap-6 text-center ">
-            <h4 class="fredoka-1 font-extrabold text-color-1 text-3xl md:text-4xl lg:text-5xl">
+            <h4 data-animate="animate__fadeInLeftBig"
+                class="fredoka-1 font-extrabold text-color-1 text-3xl md:text-4xl lg:text-5xl animate__slow">
                 Nuestros Ingredientes
             </h4>
-            <p class="text-color-2 font-medium text-sm md:text-base lg:text-lg">
+            <p data-animate="animate__fadeInLeftBig"
+                class="text-color-2 font-medium text-sm md:text-base lg:text-lg animate__fast">
                 SKY Burgers busca adoptar la cultura de la comida rápida y de alta calidad, utilizando
                 <span class="font-bold">ingredientes siempre frescos</span>, cortados en el momento.
             </p>
@@ -149,85 +160,85 @@
         <!-- GRID QUE SE AJUSTA AL RESTO DEL ALTO -->
         <div class="flex-1 min-h-0 grid grid-cols-5 gap-0.5 auto-rows-fr">
             <!-- IMG1 (2x2) -->
-            <div
-                class="col-span-2 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig"  data-fancybox="gallery" href="/public/ingre/tomate.jpg"
+                class="col-span-2 row-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__faster	">
                 <img src="/public/ingre/tomate.jpg" alt="Tomate"
                     class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
             </div>
 
             <!-- IMG2 -->
-            <div
-                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/lechuga-2.jpg"
+                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__fast">
                 <img src="/public/ingre/lechuga-2.jpg" alt="Lechuga"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
-            <!-- IMG3 (1x2) -->
-            <div
-                class="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <!-- IMG3 -->
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/cebolla.jpg"
+                class="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__fast">
                 <img src="/public/ingre/cebolla.jpg" alt="Cebolla"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
             <!-- IMG4 -->
-            <div
-                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/chedar.jpg"
+                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__slow">
                 <img src="/public/ingre/chedar.jpg" alt="Cheddar"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
             <!-- IMG5 (2x2) -->
-            <div
-                class="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/carne.jpg"
+                class="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__fast">
                 <img src="/public/ingre/carne.jpg" alt="Carne"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
             <!-- IMG6 -->
-            <div
-                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/jamoncrudo.jpg"
+                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__slow">
                 <img src="/public/ingre/jamoncrudo.jpg" alt="Huevos"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
             <!-- IMG7 -->
-            <div
-                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/jamon-2.jpg"
+                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__faster	">
                 <img src="/public/ingre/jamon-2.jpg" alt="Jamón"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
             <!-- IMG8 -->
-            <div
-                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/huevos.jpg"
+                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__faster	">
                 <img src="/public/ingre/huevos.jpg" alt="Jamón Crudo"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
             <!-- IMG9 -->
-            <div
-                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/quesoazul.jpg"
+                class="rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__fast">
                 <img src="/public/ingre/quesoazul.jpg" alt="Queso Azul"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
-            <!-- IMG10 (1x2) -->
-            <div
-                class="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <!-- IMG10-->
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/rucula.jpg"
+                class="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__slow">
                 <img src="/public/ingre/rucula.jpg" alt="Rúcula"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
             <!-- IMG11 (2x1) -->
-            <div
-                class="col-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/aceitunas.jpg"
+                class="col-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__faster	">
                 <img src="/public/ingre/aceitunas.jpg" alt="Aceitunas"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
 
             <!-- IMG12 (2x1) -->
-            <div
-                class="col-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group">
+            <div data-animate="animate__fadeInRightBig" data-fancybox="gallery" href="/public/ingre/tybo.jpg"
+                class="col-span-2 rounded-2xl md:rounded-3xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group animate__fast">
                 <img src="/public/ingre/tybo.jpg" alt="Tybo"
                     class="w-full h-full object-cover group-hover:scale-110 transition">
             </div>
@@ -235,17 +246,141 @@
         </div>
     </section>
 
+    <!-- seccion de reseñas -->
+    <section class="css-selector-3 h-auto p-4 md:p-10 lg:px-36">
+        <div class="color-1 h-full rounded-3xl shadow-1 flex flex-col gap-5 p-4 ">
 
-    <!-- POR QUÉ ELEGIRNOS -->
+            <!-- Título y subtítulo -->
+            <div class="text-center">
+                <h3 class="fredoka-1 font-extrabold text-color-3 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                    Nuestros Clientes
+                </h3>
+                <h6 class="text-color-3 font-medium text-lg sm:text-xl md:text-2xl mt-2">
+                    Sus opiniones y reseñas
+                </h6>
+            </div>
+
+            <!-- Grid de reseñas - AHORA SÍ RESPONSIVE -->
+            <div class="grid sm:grid-cols-2  md:grid-cols-3 grid-flow-row gap-5 justify-center w-full">
+
+
+
+                <!-- Reseña 1 -->
+                <div data-animate="animate__flipInX" class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl  hover:scale-[1.03] 
+           transition-all duration-300 ease-out flex flex-col items-center text-center max-w-sm w-full">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-full color-1 p-3 mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="white" class="w-full h-full">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <p class="text-color-2 font-medium italic leading-relaxed">"Muy buena presentación 😎 y la burger lo
+                        mejooor 🤤"</p>
+                    <p class="mt-4 font-bold text-color-1 text-base md:text-lg">Facundo R.</p>
+                    <p class="text-color-2 font-medium text-xs md:text-sm">Hace 1 semana</p>
+                </div>
+
+                <!-- Reseña 2 -->
+                <div data-animate="animate__flipInX" class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl  hover:scale-[1.03] 
+           transition-all duration-300 ease-out flex flex-col items-center text-center max-w-sm w-full">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-full color-1 p-3 mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="white" class="w-full h-full">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <p class="text-color-2 font-medium italic leading-relaxed">"Muy ricas estuvieron las burger Crack"
+                    </p>
+                    <p class="mt-4 font-bold text-color-1 text-base md:text-lg">Valentina S.</p>
+                    <p class="text-color-2 font-medium text-xs md:text-sm">Hace 4 días</p>
+                </div>
+
+                <!-- Reseña 3 -->
+                <div data-animate="animate__flipInX" class="bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl  hover:scale-[1.03] 
+           transition-all duration-300 ease-out flex flex-col items-center text-center max-w-sm w-full">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-full color-1 p-3 mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="white" class="w-full h-full">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <p class="text-color-2 font-medium italic leading-relaxed">"Las mejores burger que probé en
+                        Tinogasta"</p>
+                    <p class="mt-4 font-bold text-color-1 text-base md:text-lg">Martín L.</p>
+                    <p class="text-color-2 font-medium text-xs md:text-sm">Hace 6 días</p>
+                </div>
+
+                <!-- Reseña 4 -->
+                <div data-animate="animate__flipInX" class="hidden bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl  hover:scale-[1.03] 
+           transition-all duration-300 ease-out sm:flex flex-col items-center text-center max-w-sm w-full">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-full color-1 p-3 mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="white" class="w-full h-full">
+                            <path strokerex="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <p class="text-color-2 font-medium italic leading-relaxed">"Esta tan buena que no llega para la
+                        foto"</p>
+                    <p class="mt-4 font-bold text-color-1 text-base md:text-lg">Sofía P.</p>
+                    <p class="text-color-2 font-medium text-xs md:text-sm">Hace 2 horas</p>
+                </div>
+
+                <!-- Reseña 5 -->
+                <div data-animate="animate__flipInX" class="hidden bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl  hover:scale-[1.03] 
+           transition-all duration-300 ease-out md:flex flex-col items-center text-center max-w-sm w-full">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-full color-1 p-3 mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="white" class="w-full h-full">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <p class="text-color-2 font-medium italic leading-relaxed">"un lujo como siempre"</p>
+                    <p class="mt-4 font-bold text-color-1 text-base md:text-lg">Tomás G.</p>
+                    <p class="text-color-2 font-medium text-xs md:text-sm">Hace 5 días</p>
+                </div>
+                <!-- Reseña 6 -->
+                <div data-animate="animate__flipInX" class="hidden bg-white rounded-3xl p-6 shadow-lg hover:shadow-2xl  hover:scale-[1.03] 
+           transition-all duration-300 ease-out md:flex flex-col items-center text-center max-w-sm w-full">
+                    <div
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-full color-1 p-3 mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8"
+                            stroke="white" class="w-full h-full">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
+                    <p class="text-color-2 font-medium italic leading-relaxed">"Muy buena Broo zarpada la Burger sos
+                        crack"</p>
+                    <p class="mt-4 font-bold text-color-1 text-base md:text-lg">Nico H.</p>
+                    <p class="text-color-2 font-medium text-xs md:text-sm">Hace 1 día</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- por que elegirnos -->
     <section
         class="quicksand-1 color-4 py-20 px-6 md:px-12 lg:px-36 bg-[url('/public/fondos/C/PATRONC2.png')] bg-cover bg-fixed">
 
         <!-- TÍTULO -->
         <div class="text-center mb-12">
-            <h6 class="fredoka-1 text-color-1 font-extrabold text-2xl md:text-3xl">
+            <h6 data-animate="animate__fadeInDownBig"
+                class="fredoka-1 text-color-1 font-extrabold text-2xl md:text-3xl">
                 ¿Por qué elegir SKY BURGERS?
             </h6>
-            <h3 class="fredoka-1 text-color-2 font-bold text-3xl md:text-4xl lg:text-5xl mt-2">
+            <h3 data-animate="animate__fadeInDownBig"
+                class="fredoka-1 text-color-2 font-bold text-3xl md:text-4xl lg:text-5xl mt-2 animate__slow">
                 4 razones para elegirnos
             </h3>
         </div>
@@ -254,7 +389,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
             <!-- ITEM -->
-            <div
+            <div data-animate="animate__fadeInDownBig"
                 class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all p-6 flex flex-col items-center text-center hover:-translate-y-1 duration-300">
                 <img src="/public/icons/tabla-de-cortar.png" class="w-16 h-16 mb-4" alt="ingredientes frescos">
                 <h4 class="fredoka-1 text-color-1 font-bold text-xl">Ingredientes Frescos</h4>
@@ -263,7 +398,7 @@
             </div>
 
             <!-- ITEM -->
-            <div
+            <div data-animate="animate__fadeInUpBig"
                 class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all p-6 flex flex-col items-center text-center hover:-translate-y-1 duration-300">
                 <img src="/public/icons/hamburguesa.png" class="w-16 h-16 mb-4" alt="Variedades">
                 <h4 class="fredoka-1 text-color-1 font-bold text-xl">Diversas Variedades</h4>
@@ -272,7 +407,7 @@
             </div>
 
             <!-- ITEM -->
-            <div
+            <div data-animate="animate__fadeInDownBig"
                 class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all p-6 flex flex-col items-center text-center hover:-translate-y-1 duration-300">
                 <img src="/public/icons/cocinando.png" class="w-16 h-16 mb-4" alt="Sabor único">
                 <h4 class="fredoka-1 text-color-1 font-bold text-xl">Sabor Único</h4>
@@ -281,7 +416,7 @@
             </div>
 
             <!-- ITEM -->
-            <div
+            <div data-animate="animate__fadeInUpBig"
                 class="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all p-6 flex flex-col items-center text-center hover:-translate-y-1 duration-300">
                 <img src="/public/icons/entrega-de-comida.png" class="w-16 h-16 mb-4" alt="Delivery">
                 <h4 class="fredoka-1 text-color-1 font-bold text-xl">Delivery</h4>
@@ -292,13 +427,13 @@
         </div>
     </section>
 
-
-    <!-- SECCIÓN FINAL -->
+    <!-- seccion final -->
     <section class="color-3 quicksand-1 py-24 px-6 md:px-12 lg:px-36 flex flex-col items-center text-center">
 
         <div class="max-w-3xl flex flex-col items-center gap-6">
 
-            <h2 class="fredoka-1 text-color-1 font-extrabold text-3xl md:text-4xl lg:text-5xl leading-tight">
+            <h2 data-animate="animate__rubberBand"
+                class="fredoka-1 text-color-1 font-extrabold text-3xl md:text-4xl lg:text-5xl leading-tight">
                 La combinación perfecta que hace a nuestras SKY Burgers únicas en Tinogasta
             </h2>
 
@@ -306,15 +441,16 @@
                 No encontrarás otra burger igual: calidad, sabor, ingredientes frescos y estilo propio.
             </p>
 
-            <a href="/page/menu.html"
-                class="mt-6 color-1 text-color-2 rounded-full px-10 py-4 text-sm md:text-lg font-bold uppercase tracking-wide
-            shadow-md hover:shadow-xl hover:scale-105 hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center gap-3">
+            <a href="/page/menu.html" data-animate="animate__flipInY"
+                class="mt-6 color-1 text-color-2 rounded-full px-10 py-4 text-sm md:text-lg font-bold uppercase 
+            shadow-md transform transition-all duration-300 flex items-center gap-3 animate__slow hover:shadow-xl hover:text-white ">
                 <img src="/public/icons/sombrero-de-cocinero.png" class="w-6 h-6" alt="menu">
                 Ver Menú
             </a>
 
         </div>
     </section>
+
     <footer
         class="h-auto color-2 text-white flex flex-col quicksand-1 p-4 justify-center items-center md:px-10 lg:px-32">
 
@@ -349,7 +485,7 @@
                     color-3 text-color-2
                     rounded-full px-7 py-3
                     text-sm md:text-base
-                    font-bold uppercase tracking-wide
+                    font-bold uppercase 
                     shadow-sm hover:shadow-md
                     hover:scale-105
                     hover:bg-red-500 hover:text-white
@@ -398,7 +534,8 @@
     </footer>
 
     <script src="../script/codex.js"></script>
-
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 </body>
 
 </html>

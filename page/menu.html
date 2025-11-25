@@ -10,19 +10,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animate.css 2025 – versión más rápida y con más efectos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 </head>
 
 <body class="bg-gray-50">
 
     <!-- NAVEGACIÓN (igual que home) -->
-     <header class="h-18"> 
+    <header class="h-18">
         <nav id="navbar"
             class="fredoka-1 font-semibold shadow-md fixed z-50 w-full top-0 left-0 px-1 md:px-6 lg:px-28 color-1">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
-                    <a href="../index.html" class="flex items-center space-x-2"> 
+                    <a href="../index.html" class="flex items-center space-x-2">
                         <img id="logo" src="../public/LOGO HORIZONTAL.png" alt="Logo"
                             class="hover:scale-105 transition-all duration-300 sombra-img h-10 w-auto object-contain">
                     </a>
@@ -45,6 +52,7 @@
                         class="hidden md:flex space-x-8 font-medium justify-center items-center text-color-3">
                         <a href="nosotros.html" class="hover:text-gray-100 transition-colors">Nosotros</a>
                         <a href="menu.html" class="hover:text-gray-100 transition-colors">Menú</a>
+                        <a href="galeria.html" class="hover:text-gray-100 transition-colors">Galeria</a>
                         <a href="contact.html" class="hover:text-gray-100 transition-colors **font-bold**">Contacto</a>
                         <a id="boton-pedido" href="pedidos.html"
                             class="color-2 text-white px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition-all shadow-md hover:shadow-lg">
@@ -58,6 +66,7 @@
                 <div class="flex flex-col space-y-2 px-6 py-4">
                     <a href="nosotros.html" class="text-gray-700 hover:text-color-2">Nosotros</a>
                     <a href="menu.html" class="text-gray-700 hover:text-color-2">Menú</a>
+                    <a href="galeria.html" class="text-gray-700 hover:text-color-2">Galeria</a>
                     <a href="contact.html" class="text-gray-700 hover:text-color-2 **font-bold**">Contacto</a>
                     <a href="pedidos.html"
                         class="color-2 text-white px-4 py-2 rounded-full text-center hover:bg-red-700 transition-all shadow-md hover:shadow-lg">
@@ -69,136 +78,170 @@
     </header>
 
 
-    <!-- HERO MENÚ -->
-    <section class="h-screen flex flex-col justify-center items-center text-center px-6 relative bg-[url('/public/pruebas/listas/4.png')] md:bg-[url('/public/pruebas/listas/10.png')] color-2 bg-fixed bg-cover bg-no-repeat bg-center">
-        <div class="relative z-10">
-            <h6 class="fredoka-1 text-color-3 text-xl md:text-2xl font-medium uppercase tracking-widest">Nuestras variedades</h6>
-            <h1 class="fredoka-1 text-color-3 text-5xl md:text-7xl lg:text-8xl font-extrabold mt-4 drop-shadow-2xl">MENÚ</h1>
-            <p class="quicksand-1 text-color-3 text-lg md:text-xl mt-4 max-w-2xl">Hamburguesas artesanales con amor, sabor y mucha actitud</p>
+    <!-- seccion de inico MENÚ -->
+    <section
+        class="h-screen bg-blend-overlay flex flex-col justify-center items-center text-center px-6 relative bg-[url('/public/pruebas/listas/4.png')] md:bg-[url('/public/pruebas/listas/10.png')] color-2 bg-fixed bg-cover bg-no-repeat bg-center">
+        <div class="relative z-10" data-animate="animate__flipInX">
+            <h6 class="fredoka-1 text-color-3 text-xl md:text-2xl font-medium uppercase tracking-widest">Nuestras
+                variedades</h6>
+            <h1 class="fredoka-1 text-color-3 text-5xl md:text-7xl lg:text-8xl font-extrabold mt-4 drop-shadow-2xl">MENÚ
+            </h1>
+            <p class="quicksand-1 text-color-3 text-lg md:text-xl mt-4 max-w-2xl">Hamburguesas artesanales con amor,
+                sabor y mucha actitud</p>
         </div>
     </section>
-  
 
-<!-- MENÚ ESTILO RESTAURANTE PREMIUM -->
-<section class="py-20 px-6 md:px-14 lg:px-36 bg-gray-50 " id="menu">
-    <div class="max-w-7xl mx-auto">
 
-        <!-- TÍTULO -->
-        <div class="text-center mb-16">
-            <h6 class="fredoka-1 text-color-1 text-xl uppercase tracking-widest">Nuestro Menú</h6>
-            <h2 class="fredoka-1 text-5xl md:text-7xl font-extrabold text-color-2 mt-3">Hamburguesas con actitud</h2>
-            <p class="quicksand-1 text-gray-600 text-lg mt-4">Precios actualizados • Noviembre 2025</p>
-        </div>
+    <!-- MENÚ -->
+    <section class="w-full py-20 px-6 md:px-14 lg:px-36 bg-gray-50 " id="menu">
+        <div>
 
-        <div class="grid grid-cols-1 gap-16">
+            <!-- TÍTULO -->
+            <div class="w-full text-center mb-16">
+                <h6 data-animate="animate__fadeInDownBig"
+                    class="fredoka-1 text-color-1 font-bold text-xl uppercase tracking-widest">Nuestro Menú</h6>
+                <h2 data-animate="animate__fadeInDownBig"
+                    class="fredoka-1 text-4xl sm:text-5xl md:text-7xl font-extrabold text-color-2 mt-3 animate__slow">
+                    Hamburguesas con actitud
+                </h2>
+                <p class="quicksand-1 text-gray-600 text-lg mt-4">Precios actualizados • Noviembre 2025</p>
+            </div>
 
-            <!-- COLUMNA IZQUIERDA -->
-            <div class="space-y-12">
+            <!-- carta de hamburguesas  -->
+            <div class="flex flex-col gap-16">
 
                 <!-- HAMBURGUESAS CLÁSICAS -->
-                <div>
-                    <h3 class="fredoka-1 text-4xl font-bold text-color-2 mb-8 border-b-4 border-color-1 inline-block">Hamburguesas Clásicas</h3>
-                    <div class="space-y-6">
+                <div class="space-y-6" data-animate="animate__zoomInUp">
 
-                        <div class="menu-item-classic">
-                            <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
-                                <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger John</h4>
-                                <span class="fredoka-1 text-2xl font-bold text-color-1">$5.000</span>
-                            </div>
-                            <p class="quicksand-1 text-gray-600 mt-2">Queso tybo · Jamón · Mayonesa</p>
+                    <h3 class="fredoka-1 text-4xl font-bold text-color-2 mb-8 border-b-4 border-color-1 inline-block">
+                        Hamburguesas Clásicas</h3>
+
+                    <!-- hamburguesa John  -->
+                    <div class="menu-item-classic">
+                        <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
+                            <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger John</h4>
+                            <span class="fredoka-1 text-2xl font-bold text-color-1">$5.000</span>
                         </div>
-
-                        <div class="menu-item-classic">
-                            <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
-                                <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Común</h4>
-                                <span class="fredoka-1 text-2xl font-bold text-color-1">$6.000</span>
-                            </div>
-                            <p class="quicksand-1 text-gray-600 mt-2">Lechuga · Tomate · Queso tybo · Mayonesa</p>
-                        </div>
-
-                        <div class="menu-item-classic">
-                            <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
-                                <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Especial</h4>
-                                <span class="fredoka-1 text-2xl font-bold text-color-1">$7.000</span>
-                            </div>
-                            <p class="quicksand-1 text-gray-600 mt-2">Lechuga · Tomate · Queso · Jamón · Huevo · Mayo</p>
-                        </div>
-
+                        <p class="quicksand-1 text-gray-600 mt-2">Queso Tybo · Jamón · Mayonesa</p>
                     </div>
+
+                    <!-- hamburguesa Especial  -->
+                    <div class="menu-item-classic">
+                        <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
+                            <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Especial
+                            </h4>
+                            <span class="fredoka-1 text-2xl font-bold text-color-1">$7.000</span>
+                        </div>
+                        <p class="quicksand-1 text-gray-600 mt-2">Lechuga · Tomate · Queso Tybo · Jamón · Huevo ·
+                            Mayonesa · Ketchup </p>
+                    </div>
+
+
                 </div>
 
                 <!-- HAMBURGUESAS PREMIUM -->
-                <div>
-                    <h3 class="fredoka-1 text-4xl font-bold text-color-2 mb-8 border-b-4 border-color-1 inline-block">Hamburguesas Premium</h3>
-                    <div class="space-y-6">
+                <div class="space-y-6" data-animate="animate__zoomInUp">
 
-                        <div class="menu-item-classic">
-                            <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
-                                <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Jade</h4>
-                                <span class="fredoka-1 text-2xl font-bold text-color-1">$7.500</span>
-                            </div>
-                            <p class="quicksand-1 text-gray-600 mt-2">Queso azul · Rúcula · Tomate seco · Mayo</p>
+                    <h3 class="fredoka-1 text-4xl font-bold text-color-2 mb-4 border-b-4 border-color-1 inline-block">
+                        Hamburguesas Premium
+                    </h3>
+
+                    <!-- hamburguesa Jade  -->
+                    <div class="">
+                        <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
+                            <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Jade</h4>
+                            <span class="fredoka-1 text-2xl font-bold text-color-1">$7.500</span>
                         </div>
-
-                        <div class="menu-item-classic">
-                            <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
-                                <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Sparrow</h4>
-                                <span class="fredoka-1 text-2xl font-bold text-color-1">$8.000</span>
-                            </div>
-                            <p class="quicksand-1 text-gray-600 mt-2">Cheddar · Cebolla caramelizada · Salsa BBQ</p>
-                        </div>
-
+                        <p class="quicksand-1 text-gray-600 mt-2">Queso Azul · Queso Tybo · Rúcula · Tomate · Mayonesa ·
+                            Ketchup</p>
                     </div>
+
+                    <!-- hamburguesa Heisenburger  -->
+                    <div class="">
+                        <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
+                            <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Heisenburger
+                            </h4>
+                            <span class="fredoka-1 text-2xl font-bold text-color-1">$7.500</span>
+                        </div>
+                        <p class="quicksand-1 text-gray-600 mt-2">Queso Tybo · Queso Azul · Cebolla Morada · Tomate ·
+                            Ketchup</p>
+                    </div>
+
+                    <!-- hamburguesa Sparrow  -->
+                    <div class="">
+                        <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
+                            <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Sparrow
+                            </h4>
+                            <span class="fredoka-1 text-2xl font-bold text-color-1">$8.000</span>
+                        </div>
+                        <p class="quicksand-1 text-gray-600 mt-2">Cheddar · Cebolla Morada · Lechuga · Salsa Barbacoa ·
+                            Mostaza · Ketchup</p>
+                    </div>
+
                 </div>
 
-                   <!-- HAMBURGUESAS ÉPICAS -->
-                <div>
-                    <h3 class="fredoka-1 text-4xl font-bold text-color-2 mb-8 border-b-4 border-color-1 inline-block">Hamburguesas Épicas</h3>
-                    <div class="space-y-6">
+                <!-- HAMBURGUESAS ÉPICAS -->
+                <div class="space-y-6" data-animate="animate__zoomInUp">
 
-                        <div class="menu-item-classic">
-                            <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
-                                <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Salazar</h4>
-                                <span class="fredoka-1 text-2xl font-bold text-color-1">$9.000</span>
-                            </div>
-                            <p class="quicksand-1 text-gray-600 mt-2">Jamón crudo · Queso tybo · Rúcula · Reducción balsámica</p>
-                        </div>
+                    <h3 class="fredoka-1 text-4xl font-bold text-color-2 mb-8 border-b-4 border-color-1 inline-block">
+                        Hamburguesas Épicas</h3>
 
-                        <div class="menu-item-classic">
-                            <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
-                                <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Laniakea</h4>
-                                <span class="fredoka-1 text-2xl font-bold text-color-1">$9.500</span>
-                            </div>
-                            <p class="quicksand-1 text-gray-600 mt-2">Triple medallón · Cheddar · Cebolla crispy · Salsa picante</p>
+                    <!-- hamburguesa Salazar  -->
+                    <div class="">
+                        <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
+                            <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Salazar
+                            </h4>
+                            <span class="fredoka-1 text-2xl font-bold text-color-1">$9.000</span>
                         </div>
-                        <div class="menu-item-classic bg-gradient-to-r from-color-1/5 to-color-1/10 rounded-2xl p-6 shadow-lg">
-                            <div class="flex justify-between items-baseline border-b-2 border-dotted border-color-1 pb-3">
-                                <h4 class="fredoka-1 uppercase text-2xl font-extrabold text-color-1">★ SKY BURGER ★</h4>
-                                <span class="fredoka-1 text-3xl font-extrabold text-color-1">$10.000</span>
-                            </div>
-                            <p class="quicksand-1 text-color-2 font-bold mt-3 text-lg">Doble medallón · Cheddar · Huevo · Panceta · Salsa Sky [contiene cebolla]</p>
-                        </div>
-
+                        <p class="quicksand-1 text-gray-600 mt-2">Jamón Crudo · Queso Tybo · Cebolla Salteada · Huevo ·
+                            Rúcula · Mayonesa
+                        </p>
                     </div>
+
+                    <!-- hamburguesa Laniakea  -->
+                    <div class="">
+                        <div class="flex justify-between items-baseline border-b-2 border-dotted border-gray-300 pb-3">
+                            <h4 class="fredoka-1 uppercase text-xl font-semibold text-color-2">Burger Laniakea
+                            </h4>
+                            <span class="fredoka-1 text-2xl font-bold text-color-1">$9.500</span>
+                        </div>
+                        <p class="quicksand-1 text-gray-600 mt-2">Jamón Crudo · Queso Tybo · Queso Azul · Rúcula ·
+                            Aceitunas Negras · Mayonesa · Moztaza · Picante </p>
+                    </div>
+
+
                 </div>
 
             </div>
+
+
+            <!-- hamburguesa Sky-Burger  -->
+            <div class="rounded-2xl p-6 shadow-lg" data-animate="animate__zoomInUp">
+                <div class="flex justify-between items-baseline border-b-2 border-dotted border-color-1 pb-3">
+                    <h4 class="fredoka-1 uppercase text-2xl font-extrabold text-color-1">★ SKY BURGER ★
+                    </h4>
+                    <span class="fredoka-1 text-3xl font-extrabold text-color-1">$10.000</span>
+                </div>
+                <p class="quicksand-1 text-color-2 font-bold mt-3 text-lg">Doble medallón · Queso Tybo · Cheddar ·
+                    Huevo · Mayonesa · Ketchup · Salsa Sky [contiene cebolla]</p>
+            </div>
+
+            <!-- BOTON FINAL -->
+            <div class="text-center mt-20">
+                <a href="/page/pedidos.html"
+                    class="inline-flex items-center gap-3 md:gap-4 color-1 text-white p-3 md:p-5 md:text-xl rounded-full text-base font-bold hover:bg-black transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:scale-105">
+                    <svg class="w-5 h-5 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
+                    </svg>
+                    HACER MI PEDIDO AHORA
+                </a>
+            </div>
+
+
+
         </div>
-
-        <!-- BOTÓN FINAL -->
-        <div class="text-center mt-20">
-            <a href="/page/pedidos.html" class="inline-flex items-center gap-3 md:gap-4 color-1 text-white p-3 md:p-5 md:text-xl rounded-full text-base font-bold hover:bg-black transition-all shadow-2xl hover:shadow-3xl transform hover:scale-105">
-               <svg class="w-5 h-5 md:w-7 md:h-7" fill="currentColor" viewBox="0 0 24 24">
-                    <path
-                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488" />
-                </svg>
-                HACER MI PEDIDO AHORA
-            </a>
-        </div>
-
-    </div>
-</section>
-
+    </section>
 
 
     <!-- FOOTER (igual que home) -->
@@ -212,7 +255,8 @@
                 <p class="font-medium flex items-center text-sm sm:text-base">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-5 mr-1">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
                     </svg>
@@ -231,7 +275,7 @@
                     Desde 22:00 a 00:00
                 </p>
                 <p class="text-sm sm:text-base">de Lunes a sabado</p>
-               
+
             </div>
 
             <div class="py-8 flex flex-col gap-2 flex-1 sm:flex-auto">
@@ -272,7 +316,10 @@
 
     </footer>
 
-    <script src="../script/codex.js"></script>
+    <script src="/script/codex.js"></script>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
 </body>
+
 </html>

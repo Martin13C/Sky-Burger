@@ -77,23 +77,6 @@ window.addEventListener("scroll", () => {
 // ANIMACIONES AUTOMÁTICAS (on scroll)
 // =======================================
 
-// const animatedElements = document.querySelectorAll("[data-animate]");
-
-// const observer = new IntersectionObserver(
-//     (entries) => {
-//         entries.forEach((entry) => {
-//             if (entry.isIntersecting) {
-//                 const animation = entry.target.dataset.animate;
-//                 entry.target.classList.add(...animation.split(" "));
-//                 observer.unobserve(entry.target);
-//             }
-//         });
-//     },
-//     { threshold: 0.2 }
-// );
-
-// animatedElements.forEach((el) => observer.observe(el));
-
 document.addEventListener("DOMContentLoaded", () => {
     const elements = document.querySelectorAll("[data-animate]");
 

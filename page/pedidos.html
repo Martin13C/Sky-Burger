@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Animate.css 2025 – versión más rápida y con más efectos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body class="bg-gray-50">
@@ -44,6 +46,7 @@
                         class="hidden md:flex space-x-8 font-medium justify-center items-center text-color-3">
                         <a href="nosotros.html" class="hover:text-gray-100 transition-colors">Nosotros</a>
                         <a href="menu.html" class="hover:text-gray-100 transition-colors">Menú</a>
+                        <a href="galeria.html" class="hover:text-gray-100 transition-colors">Galeria</a>
                         <a href="contact.html" class="hover:text-gray-100 transition-colors **font-bold**">Contacto</a>
                         <a id="boton-pedido" href="pedidos.html"
                             class="color-2 text-white px-4 py-2 rounded-full hover:bg-red-700 hover:text-white transition-all shadow-md hover:shadow-lg">
@@ -57,6 +60,7 @@
                 <div class="flex flex-col space-y-2 px-6 py-4">
                     <a href="nosotros.html" class="text-gray-700 hover:text-color-2">Nosotros</a>
                     <a href="menu.html" class="text-gray-700 hover:text-color-2">Menú</a>
+                    <a href="galeria.html" class="text-gray-700 hover:text-color-2">Galeria</a>
                     <a href="contact.html" class="text-gray-700 hover:text-color-2 **font-bold**">Contacto</a>
                     <a href="pedidos.html"
                         class="color-2 text-white px-4 py-2 rounded-full text-center hover:bg-red-700 transition-all shadow-md hover:shadow-lg">
@@ -72,9 +76,9 @@
         class="h-screen bg-[url('/public/fondos/C/PATRONC4.png')] color-2 bg-cover bg-fixed bg-no-repeat flex flex-col justify-center items-center text-center ">
     
         <div class="relative z-10">
-            <h6 class="fredoka-1 text-white text-xl md:text-2xl font-medium uppercase tracking-widest">Pedidos por
+            <h6 class="fredoka-1 text-white text-xl md:text-2xl font-medium uppercase tracking-widest" >Pedidos por
                 WhatsApp</h6>
-            <h1 class="fredoka-1 text-white text-5xl md:text-7xl lg:text-8xl font-extrabold mt-4 drop-shadow-2xl">¿QUÉ
+            <h1 class="fredoka-1 text-white text-5xl md:text-7xl lg:text-8xl font-extrabold mt-4 drop-shadow-2xl" data-animate="animate__flipInX">¿QUÉ
                 VAS A PEDIR HOY?</h1>
             <p class="quicksand-1 text-color-4 text-lg md:text-xl mt-4">Completá el formulario y te respondemos al toque
             </p>
@@ -87,7 +91,7 @@
 
 
         <!-- FORMULARIO (cuadrado izquierdo) -->
-        <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-12 flex flex-col justify-center items-center w-full gap-4">
+        <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-12 flex flex-col justify-center items-center w-full gap-4 animae__slower" data-animate="animate__flipInY">
 
             <h3 class="fredoka-1 text-3xl md:text-5xl font-extrabold text-color-2 text-center lg:text-left">
                 ¡Hablá con nosotros!
@@ -95,6 +99,8 @@
             <p class="quicksand-1 text-sm text-gray-700 text-center md:text-lg lg:text-left ">
                 Contanos qué querés pedir o preguntar y te respondemos al toque por WhatsApp
             </p>
+
+
 
             <form id="whatsapp-simple" class="space-y-4 w-full">
                 <div class="space-y-2 md:space-y-7">
@@ -124,7 +130,7 @@
         </div>
 
         <!-- MAPA (cuadrado derecho) -->
-        <div class="flex bg-white rounded-3xl shadow-2xl h-full w-full">
+        <div class="flex bg-white rounded-3xl shadow-2xl h-full w-full" >
             <iframe class="rounded-3xl"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3520.5789547289164!2d-67.56091649999999!3d-28.0678779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x969e0551969028b9%3A0x220b872254be4509!2sHarlem!5e0!3m2!1ses-419!2sar!4v1763365927759!5m2!1ses-419!2sar"
                 width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
